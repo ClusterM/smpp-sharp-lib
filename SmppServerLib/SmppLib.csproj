@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E869C250-AA19-4EEB-8713-FFD3FF012017}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Flex.Cluster.Smpp</RootNamespace>
+    <AssemblyName>SmppLib</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SmppOptionalParameter.cs" />
+    <Compile Include="_SmppPdu.cs" />
+    <Compile Include="SmppPduBindTransmitter.cs" />
+    <Compile Include="SmppClient.cs" />
+    <Compile Include="SmppPduBindTransceiver.cs" />
+    <Compile Include="SmppPduBindTransmitterResp.cs" />
+    <Compile Include="SmppPduBindTransceiverResp.cs" />
+    <Compile Include="SmppPduBindReceiver.cs" />
+    <Compile Include="SmppPduBindReceiverResp.cs" />
+    <Compile Include="SmppPduOutbind.cs" />
+    <Compile Include="SmppPduUnbind.cs" />
+    <Compile Include="SmppPduEnquireLinkResp.cs" />
+    <Compile Include="SmppPduEnquireLink.cs" />
+    <Compile Include="SmppPduGenericNack.cs" />
+    <Compile Include="_SmppPduSmBase.cs" />
+    <Compile Include="SmppPduUnbindResp.cs" />
+    <Compile Include="_SmppPduBindBase.cs" />
+    <Compile Include="_SmppPduBindRespBase.cs" />
+    <Compile Include="SmppPduDeliverSm.cs" />
+    <Compile Include="SmppPduSubmitSm.cs" />
+    <Compile Include="_SmppPduSmRespBase.cs" />
+    <Compile Include="SmppPduSubmitSmResp.cs" />
+    <Compile Include="SmppPduDeliverSmResp.cs" />
+    <Compile Include="SmppPduDataSm.cs" />
+    <Compile Include="SmppPduDataSmResp.cs" />
+    <Compile Include="SmppPduQuerySm.cs" />
+    <Compile Include="SmppPduQuerySmResp.cs" />
+    <Compile Include="SmppPduCancelSm.cs" />
+    <Compile Include="SmppPduCancelSmResp.cs" />
+    <Compile Include="SmppPduReplaceSm.cs" />
+    <Compile Include="SmppPduReplaceSmResp.cs" />
+    <Compile Include="SmppPduAlertNotification.cs" />
+    <Compile Include="SmppUdhiParameter.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
